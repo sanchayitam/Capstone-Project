@@ -6,6 +6,7 @@ Vocabulary App displays flashcards of random English words. On click of the word
 Word of the day is a great feature runs on hand held mobile and wearables.
 
 Intended User - Students
+
 Features
 • Random Word Generator
 • Instant access to Dictionary
