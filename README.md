@@ -15,3 +15,10 @@ Features
 • Home Screen widget
 • Mark words as favorite
 • Show phonetics and audio pronunciations
+
+
+[!screenshots](https://cloud.githubusercontent.com/assets/15528375/19823297/b3cb9a58-9d1c-11e6-8e70-324f0bfb9408.png)
+
+[!screenshots](https://cloud.githubusercontent.com/assets/15528375/19823296/b3cb8ce8-9d1c-11e6-8632-b893feb942d8.png)
+
+[!screenshots](https://cloud.githubusercontent.com/assets/15528375/19823314/c6199c78-9d1c-11e6-907e-25170ea61b4d.png)
