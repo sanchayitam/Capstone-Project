@@ -1,0 +1,56 @@
+<FrameLayout xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:foreground="@drawable/flashcard"
+    xmlns:custom="http://schemas.android.com/tools">
+
+<android.support.v7.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:cardElevation="@dimen/cardview_default_elevation"
+    android:id="@+id/card_view"
+    card_view:cardUseCompatPadding="true"
+    android:clickable="true"
+    android:focusable="true"
+    card_view:cardCornerRadius="5dp"
+    android:foreground="?selectableItemBackground">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+    <com.example.sanch.myapplication.Utils.AutofitTextView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height= "wrap_content"
+            android:textSize="22sp"
+            custom:minTextSize="14sp"
+            android:id="@+id/TextView_word_flash_card"
+            android:layout_marginTop="4dp"/>
+
+        <ImageButton
+            android:layout_width="@dimen/audio_default_width"
+            android:layout_height="@dimen/audio_default_height"
+            android:id="@+id/audioButton"
+            android:src="@drawable/audio_icon"
+            android:layout_below="@+id/TextView_word_flash_card"
+            android:scaleType="fitXY"
+            android:contentDescription="@string/audio"/>
+
+        <ImageView
+            android:layout_width="25sp"
+            android:layout_height="20sp"
+            android:id="@+id/favStar"
+            android:src="@drawable/heart"
+            android:layout_below="@+id/TextView_word_flash_card"
+            android:layout_alignParentEnd="true"
+            android:scaleType="fitXY"
+            android:visibility="gone"
+            android:contentDescription="@string/fav_word"/>
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>
+</FrameLayout>

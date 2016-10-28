@@ -1,0 +1,38 @@
+{
+  "project_info": {
+    "project_number": "557119457781",
+    "project_id": "vocabulary-e0bb3"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:557119457781:android:29f9febca83c94dc",
+        "android_client_info": {
+          "package_name": "com.example.sanch.myapplication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFrASjONTBTX5DxfCYZw8SARGEU8ZMfk8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 2,
+          "analytics_property": {
+            "tracking_id": "UA-85930317-1"
+          }
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- End current session if app sleeps for a period of time -->
+    <integer name="ga_sessionTimeout">300</integer>
+
+    <!-- Enable automatic Activity measurement -->
+    <bool name="ga_autoActivityTracking">true</bool>
+
+    <!--  The property id associated with this analytics tracker -->
+    <string name="ga_trackingId">UA-85930317-1</string>
+
+    <screenName name="com.example.sanch.myapplication.MainActivity">
+        Vocabulary FlashCards
+    </screenName>
+    <screenName name="com.example.sanch.myapplication.DetailActivity">
+        Meanings and Definitions
+    </screenName>
+
+
+    <!--
+      See Project Structure -> Analytics -> Google Analytics -> Learn More
+      to learn more about configuring this file.
+    -->
+</resources>

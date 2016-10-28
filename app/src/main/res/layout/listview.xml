@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+
+          <TextView
+              style="@style/Theme.Bacon.Backdrop"
+              android:id="@+id/entryNumber"
+              android:layout_alignParentStart="true"
+              android:text="1."/>
+
+        <TextView
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:id="@+id/word"
+              android:textSize="@dimen/text_size"
+              android:textColor="@color/blue"
+              android:layout_toEndOf="@id/entryNumber"
+              android:gravity="center"
+              android:layout_marginBottom="@dimen/text_margin"
+              android:textStyle="bold"
+              android:text="test word"/>
+
+          <TextView
+              android:id="@+id/partOfSpeech"
+              style="@style/Theme.Bacon.Backdrop"
+              android:layout_below="@+id/entryNumber"
+              android:layout_alignParentStart="true"
+              android:gravity="center"
+              android:textStyle="italic"
+              android:textSize="@dimen/text_size"
+              android:layout_marginBottom="@dimen/text_margin"
+              android:text="partOfSpeech"/>
+
+          <TextView
+              android:id="@+id/pronunciation"
+              style="@style/Theme.Bacon.Backdrop"
+              android:layout_below="@+id/word"
+              android:layout_alignParentEnd="true"
+              android:gravity="center"
+              android:textSize="@dimen/text_size"
+              android:layout_marginBottom="@dimen/text_margin"
+              android:text="pronunciation"/>
+
+        <ImageButton
+            android:layout_width="48sp"
+            android:layout_height="45sp"
+            android:layout_toEndOf="@id/pronunciation"
+            android:id="@+id/audioButton"
+            android:src="@drawable/audio_icon"
+            android:scaleType="fitXY" />
+
+          <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:paddingStart="@dimen/padding_margin"
+              android:paddingEnd="@dimen/padding_margin"
+              android:textSize="@dimen/text_size"
+              android:layout_marginBottom="@dimen/text_margin"
+              android:id="@+id/definitions"
+              android:layout_below="@id/partOfSpeech"
+              android:text="blablabl; bald sdlfjasdlfjasd sldfkjsfd lsdjf lsdfj "/>
+
+        </RelativeLayout>
+     </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

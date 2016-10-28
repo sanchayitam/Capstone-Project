@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"  >
+
+    <Button
+        android:id="@+id/wikipedia_it"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/color_blue"
+        android:text="@string/wiki"
+        android:contentDescription="@string/wiki"
+        android:gravity="center_vertical|center_horizontal"/>
+
+    <Button
+        android:id="@+id/google_it"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="@string/google"
+        android:backgroundTint="@color/color_blue"
+        android:contentDescription="@string/google"
+        android:gravity="center_vertical|center_horizontal"/>
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:id="@+id/favorite_button"
+        android:focusable="true"
+        android:text="@string/favorite"
+        android:backgroundTint="@color/color_blue"
+        android:layout_gravity="center_horizontal"
+        android:contentDescription="@string/added_to_favorites"
+        android:visibility="gone"/>
+
+</LinearLayout>
+
+     <ImageButton
+        android:layout_width="@dimen/audio_default_width"
+        android:layout_height="@dimen/audio_default_height"
+        android:id="@+id/audioButton"
+        android:src="@drawable/audio_icon"
+        android:scaleType="fitXY"
+        android:contentDescription="@string/audio_msg"/>
+
+    <ListView
+        android:id="@+id/defList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </ListView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/share_fab"
+        style="@style/Theme.Bacon.Detail.Fab"
+        app:pressedTranslationZ="@dimen/fab_press_translation_z"
+        android:stateListAnimator="@animator/fab_state_list_anim"
+        android:layout_gravity="bottom|end"
+        android:elevation="@dimen/fab_elevation"
+        android:contentDescription="@string/action_share" />
+
+</LinearLayout>

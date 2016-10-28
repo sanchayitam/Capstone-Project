@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dictionary_api_key">"c022d02b-5570-449a-a1dd-64f21ec72afd"</string>
+    <string name="wotd_api_key">"de46aea2a06a6bd33572d005afc01f025e0a2875bc6a089e8"</string>
+    <string name="random_wordlist_api_key">"a2a73e7b926c924fad7001ca3111acd55af2ffabf50eb4ae5"</string>
+</resources>
