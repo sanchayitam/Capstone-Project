@@ -35,11 +35,16 @@
     <string name="delete_favorite">Delete It</string>
 
     <!--widget-->
-    <string name="widget_name">Vocabulary Widget</string>
+    <string name="widget_title">FlashCard of the Day</string>
 
     <string name="empty_list_no_network" translatable="true"> Please check the Network Connectivity.</string>
     <string name="err_network" translatable="true">Error: No Internet connection detected.</string>
     <string name="err_retrieving" translatable="true">Error retrieving definition.</string>
+    <string name="err_no_email_client" translatable="true">"There are no email clients installed."</string>
+
+    <string name="email_subject" translatable="true">Vocabulary -- Feedback</string>
+    <string name="email_title" translatable="true">Send Feedback</string>
+    <string name="email_text" translatable="true">Text goes here</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="wotd_notification_title_template">Wotd: %1$s</string>
