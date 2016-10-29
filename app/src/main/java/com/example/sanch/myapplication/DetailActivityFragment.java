@@ -415,7 +415,7 @@ public class DetailActivityFragment extends Fragment  implements
             } catch (Exception e) {
                 flag = 1;
                 ArrayList<Definition> errDefs = new ArrayList<>();
-                Definition errDef = new Definition("", getString(R.string.err_retrieving), "", "", "", "");
+                Definition errDef = new Definition("", mContext.getResources().getString(R.string.err_retrieving), "", "", "", "");
                 errDefs.add(errDef);
                 return errDefs;
             }
