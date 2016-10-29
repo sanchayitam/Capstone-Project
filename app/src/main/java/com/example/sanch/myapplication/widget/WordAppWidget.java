@@ -87,9 +87,9 @@ public class WordAppWidget extends AppWidgetProvider {
 
             protected void onPostExecute(Definition content) {
                 if (content != null) {
-                    mWord =  content.getWord();
-                    mPOS =  content.getPartOfSpeech();
-                    mDef = content.getDefinitions();
+                    mWord = new String(content.getWord());
+                    mPOS =  new String (content.getPartOfSpeech());
+                    mDef =  new String(content.getDefinitions());
                 }
             }
         }
