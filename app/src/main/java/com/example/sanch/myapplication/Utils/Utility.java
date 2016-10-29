@@ -26,6 +26,9 @@ public class Utility {
   public  String audioUrl;
   public  Context context;
 
+  public Utility(Context c) {
+        context = c;
+    }
     /**
      * Returns true if the network is available or about to become available.
      *
@@ -33,6 +36,7 @@ public class Utility {
      * @return
      */
    public static boolean isNetworkAvailable(Context c) {
+
         ConnectivityManager cm =
                 (ConnectivityManager)c.getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
@@ -102,7 +106,7 @@ public class DataRetriever extends AsyncTask<String, Void, ArrayList<Definition>
 
         } catch (Exception e) {
                 ArrayList<Definition> errDefs = new ArrayList<>();
-                Definition errDef = new Definition("","Error retrieving definition" , "", "", "", "");
+                Definition errDef = new Definition("", context.getResources().getString(R.string.err_retrieving), "", "", "", "");
                 errDefs.add(errDef);
                 return errDefs;
         }
