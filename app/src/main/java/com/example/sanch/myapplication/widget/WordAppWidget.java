@@ -102,9 +102,7 @@ public class WordAppWidget extends AppWidgetProvider {
             // Build an update that holds the updated widget contents
             RemoteViews remoteViews = new RemoteViews(context.getPackageName(), R.layout.word_app_widget);
 
-              remoteViews.setTextViewText(R.id.word, mWord);
-            // remoteViews.setTextViewText(R.id.bid_price, mCursor.getString(mCursor.getColumnIndex(QuoteColumns.BIDPRICE)));
-
+            remoteViews.setTextViewText(R.id.word, mWord);
             remoteViews.setTextViewText(R.id.partOfSpeech, mPOS);
             remoteViews.setTextViewText(R.id.definitions, mDef);
 
