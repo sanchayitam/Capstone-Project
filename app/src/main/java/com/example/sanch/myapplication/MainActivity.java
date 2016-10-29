@@ -63,14 +63,14 @@ public class MainActivity extends AppCompatActivity  implements VocabFragment.Ca
                 Intent Email = new Intent(Intent.ACTION_SEND);
                 Email.setData(Uri.parse("mailto:")); // only email apps should handle this
                 Email.setType("text/plain");
-                Email.putExtra(Intent.EXTRA_TEXT, "Text goes here");
-                Email.putExtra(Intent.EXTRA_SUBJECT, "Vocabulary -- Feedback");
+                Email.putExtra(Intent.EXTRA_TEXT, getResources().getString(R.string.email_text) );
+                Email.putExtra(Intent.EXTRA_SUBJECT, getResources().getString(R.string.email_subject));
                 try {
-                    Intent Mailer = Intent.createChooser(Email, "Send Feedback");
+                    Intent Mailer = Intent.createChooser(Email, getResources().getString(R.string.email_title));
                     startActivity(Mailer);
                     // startActivity(Email);
                 } catch (android.content.ActivityNotFoundException ex) {
-                    Toast.makeText(getApplicationContext(), "There are no email clients installed.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), getResources().getString(R.string.err_no_email_client), Toast.LENGTH_SHORT).show();
                 }
             }
         });
