@@ -410,7 +410,7 @@ public class DetailActivityFragment extends Fragment  implements
                     DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
                     DocumentBuilder builder = factory.newDocumentBuilder();
                     Document doc = builder.parse(conn.getInputStream());
-                    return parse(doc);
+                    return parse(doc, mContext);
 
             } catch (Exception e) {
                 flag = 1;
@@ -440,14 +440,14 @@ public class DetailActivityFragment extends Fragment  implements
         }
     }
 
-    public static ArrayList<Definition> parse(Document doc) {
+    public static ArrayList<Definition> parse(Document doc, Context context) {
         doc.getDocumentElement().normalize();
         ArrayList<Definition> definitions = new ArrayList<Definition>();
 
         // get suggestions if the word is not found and print them out
         NodeList suggestionList = doc.getElementsByTagName("suggestion");
         if (suggestionList.getLength() > 0) {
-            String suggestText = "\nNo matches found. Did you mean:";
+            String suggestText = context.getResources().getString(R.string.err_suggestion);;
             String suggestions = "";
             for (int i = 0; i < suggestionList.getLength(); i++) {
                 Node suggestion = suggestionList.item(i);
