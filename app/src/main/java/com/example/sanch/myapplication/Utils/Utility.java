@@ -102,7 +102,7 @@ public class DataRetriever extends AsyncTask<String, Void, ArrayList<Definition>
                 DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
                 DocumentBuilder builder = factory.newDocumentBuilder();
                 Document doc = builder.parse(conn.getInputStream());
-                return parse(doc);
+                return parse(doc, context);
 
         } catch (Exception e) {
                 ArrayList<Definition> errDefs = new ArrayList<>();
@@ -125,14 +125,14 @@ public class DataRetriever extends AsyncTask<String, Void, ArrayList<Definition>
     }
 }
 
-    public static ArrayList<Definition> parse(Document doc) {
+    public static ArrayList<Definition> parse(Document doc, Context context) {
         doc.getDocumentElement().normalize();
         ArrayList<Definition> definitions = new ArrayList<Definition>();
 
         // get suggestions if the word is not found and print them out
         NodeList suggestionList = doc.getElementsByTagName("suggestion");
         if (suggestionList.getLength() > 0) {
-            String suggestText = "\nNo matches found. Did you mean:";
+            String suggestText = context.getResources().getString(R.string.err_suggestion);
             String suggestions = "";
             for (int i = 0; i < suggestionList.getLength(); i++) {
                 Node suggestion = suggestionList.item(i);
