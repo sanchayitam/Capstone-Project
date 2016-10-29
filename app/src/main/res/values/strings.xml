@@ -40,7 +40,8 @@
     <string name="empty_list_no_network" translatable="true"> Please check the Network Connectivity.</string>
     <string name="err_network" translatable="true">Error: No Internet connection detected.</string>
     <string name="err_retrieving" translatable="true">Error retrieving definition.</string>
-    <string name="err_no_email_client" translatable="true">"There are no email clients installed."</string>
+    <string name="err_no_email_client" translatable="true">There are no email clients installed.</string>
+    <string name="err_suggestion" translatable="true">No matches found. Did you mean:</string>
 
     <string name="email_subject" translatable="true">Vocabulary -- Feedback</string>
     <string name="email_title" translatable="true">Send Feedback</string>
