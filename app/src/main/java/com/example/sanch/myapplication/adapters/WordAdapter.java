@@ -71,7 +71,7 @@ public class WordAdapter extends RecyclerView.Adapter<WordAdapter.ViewHolder>  {
             @Override
             public void onClick(View v) {
 
-                Utility.DataRetriever dataRetriever = new Utility().new DataRetriever();
+                Utility.DataRetriever dataRetriever = new Utility(mContext).new DataRetriever();
                 String queryURL = Utility.NetworkConn(theWord, mContext);
                 dataRetriever.execute(queryURL);
             }

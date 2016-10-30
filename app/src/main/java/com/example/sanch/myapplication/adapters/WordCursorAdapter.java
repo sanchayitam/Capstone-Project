@@ -55,7 +55,7 @@ public class WordCursorAdapter extends RecyclerView.Adapter<WordCursorAdapter.Vi
          holder.imgButton.setOnClickListener(new View.OnClickListener() {
           @Override
               public void onClick(View v) {
-              Utility.DataRetriever dataRetriever = new Utility().new DataRetriever();
+              Utility.DataRetriever dataRetriever = new Utility(mContext).new DataRetriever();
               String queryURL = Utility.NetworkConn(theWord, mContext);
               dataRetriever.execute(queryURL);
           }
