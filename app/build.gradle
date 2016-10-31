@@ -14,7 +14,7 @@ android {
 
     signingConfigs {
         release {
-            storeFile file("config/release.keystore/vocabkey.jks")
+            storeFile file("$rootDir/config/release.store/vocabkey.jks")
             storePassword "udacity"
             keyAlias "VocabKey"
             keyPassword "capstone"
